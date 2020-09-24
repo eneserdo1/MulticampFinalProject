@@ -1,9 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DetailActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp">
+
+        <ImageView
+            android:id="@+id/detail_banner"
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            android:adjustViewBounds="true"
+            android:background="#929E9C"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/detail_photo"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginBottom="3dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/detail_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Lider İsmi"
+        android:fontFamily="@font/nunito"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/detail_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:textSize="16sp"
+        android:layout_margin="20dp"/>
+    <TextView
+        android:id="@+id/youtube_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/youtube"
+        android:textColor="#0327DA"
+        android:drawablePadding="8dp"
+        android:text="Youtube"
+        android:textSize="16sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="30dp"
+       />
+
+    <TextView
+        android:id="@+id/twitter_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_twitter"
+        android:drawablePadding="8dp"
+        android:text="Twitter"
+        android:textColor="#0327DA"
+        android:textSize="16sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/instagram_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_instagram"
+        android:drawablePadding="8dp"
+        android:text="İnstagram"
+        android:textColor="#0327DA"
+        android:textSize="16sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="5dp"
+      />
+
+
+
+
+</LinearLayout>
+</ScrollView>

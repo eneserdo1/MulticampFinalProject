@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<List<Community>>, response: Response<List<Community>>) {
                     val communities=response.body()!!
                     val stringbuilder=StringBuilder()
-                    recyclerView.adapter=CommunityAdapter(communities,applicationContext)
+                    recyclerView.adapter=CommunityAdapter(communities,this@MainActivity)
 
                 }
 

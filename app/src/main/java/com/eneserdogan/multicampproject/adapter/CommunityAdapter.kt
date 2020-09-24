@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.eneserdogan.multicampproject.DetailActivity
@@ -31,16 +32,27 @@ class CommunityAdapter(val list:List<Community>,val context: Context):RecyclerVi
         holder.itemView.recyclerview_name.text=list[position].name
         holder.itemView.recyclerview_imageview.load(list[position].banner)
         holder.itemView.setOnClickListener {
-            onCellClickListener(list[position])
+            //onCellClickListener(list[position])
+            val intent = Intent(context,DetailActivity::class.java)
+            val data=list[position]
+            intent.putExtra("banner",data.banner)
+            intent.putExtra("description",data.description)
+            intent.putExtra("photo",data.leader.photo)
+            intent.putExtra("name",data.leader.name)
+            intent.putExtra("youtube",data.links.youtube)
+            intent.putExtra("twitter",data.links.twitter)
+            intent.putExtra("instagram",data.links.instagram)
+            intent.putExtra("participation",data.links.participation)
+            context.startActivity(intent)
+
+
         }
-
-
     }
 
     override fun onCellClickListener(data: Community) {
         val intent = Intent(context,DetailActivity::class.java)
-        println("data =="+data.leader)
-        
+        context.startActivity(intent)
+
 
     }
 }
