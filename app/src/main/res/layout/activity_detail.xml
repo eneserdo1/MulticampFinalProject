@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -43,7 +45,8 @@
         android:text="Lider İsmi"
         android:fontFamily="@font/nunito"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_marginTop="7dp"/>
     <TextView
         android:id="@+id/detail_description"
         android:layout_width="wrap_content"
@@ -51,47 +54,46 @@
         android:fontFamily="@font/nunito"
         android:textSize="16sp"
         android:layout_margin="20dp"/>
-    <TextView
-        android:id="@+id/youtube_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/youtube"
-        android:textColor="#0327DA"
-        android:drawablePadding="8dp"
-        android:text="Youtube"
-        android:textSize="16sp"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="30dp"
-       />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:id="@+id/youtube_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/youtube"
+            android:textColor="#0327DA"
+            android:drawablePadding="8dp"
+            android:padding="10dp"
+            android:textSize="16sp"
+            />
 
-    <TextView
-        android:id="@+id/twitter_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_twitter"
-        android:drawablePadding="8dp"
-        android:text="Twitter"
-        android:textColor="#0327DA"
-        android:textSize="16sp"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/twitter_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_twitter"
+            android:drawablePadding="8dp"
+            android:textColor="#0327DA"
+            android:textSize="16sp"
+            android:padding="10dp"
+            />
 
-    <TextView
-        android:id="@+id/instagram_txt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:drawableStart="@drawable/ic_instagram"
-        android:drawablePadding="8dp"
-        android:text="İnstagram"
-        android:textColor="#0327DA"
-        android:textSize="16sp"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="5dp"
-      />
+        <TextView
+            android:id="@+id/instagram_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_instagram"
+            android:drawablePadding="8dp"
+            android:textColor="#0327DA"
+            android:padding="10dp"
+            android:textSize="16sp"
 
-
-
-
+            />
+    </LinearLayout>
 </LinearLayout>
 </ScrollView>

@@ -24,9 +24,9 @@ class DetailActivity: AppCompatActivity() {
         detail_banner.load(banner)
         detail_photo.load(photo)
         detail_name.text=name
-        youtube_txt.text=youtube
-        instagram_txt.text=instagram
-        twitter_txt.text=twitter
+        //youtube_txt.text=youtube
+        //instagram_txt.text=instagram
+        //twitter_txt.text=twitter
         detail_description.text=desription
 
 
