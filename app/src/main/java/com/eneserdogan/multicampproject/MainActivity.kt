@@ -24,31 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        recyclerView.layoutManager=LinearLayoutManager(this)
 
-        lifecycleScope.launch {
-            val retrofit=Retrofit.Builder()
-                .addConverterFactory(GsonConverterFactory.create())
-                .baseUrl("https://5f6642a143662800168e7538.mockapi.io/")
-                .build()
-
-            val ApiServis=retrofit.create(APIService::class.java)
-            val myCall=ApiServis.getCommunity()
-
-            myCall.enqueue(object :Callback<List<Community>>{
-                override fun onFailure(call: Call<List<Community>>, t: Throwable) {
-                    Log.e("ERROR",t.message.toString())
-                }
-
-                override fun onResponse(call: Call<List<Community>>, response: Response<List<Community>>) {
-                    val communities=response.body()!!
-                    val stringbuilder=StringBuilder()
-                    recyclerView.adapter=CommunityAdapter(communities,this@MainActivity)
-
-                }
-
-            })
-        }
 
 
 

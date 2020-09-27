@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/list_to_detail"
+    app:startDestination="@id/communityListFragment">
+
+    <fragment
+        android:id="@+id/communityListFragment"
+        android:name="com.eneserdogan.multicampproject.CommunityListFragment"
+        android:label="CommunityListFragment" >
+        <action
+            android:id="@+id/action_communityListFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.eneserdogan.multicampproject.DetailFragment"
+        android:label="DetailFragment" >
+        <argument
+            android:name="banner"
+            app:argType="string"
+            android:defaultValue="none" />
+        <argument
+            android:name="photo"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="name"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="description"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="youtube"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="instagram"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="twitter"
+            app:argType="string"
+            android:defaultValue="none"/>
+        <argument
+            android:name="participation"
+            app:argType="string"
+            android:defaultValue="none"/>
+
+    </fragment>
+</navigation>
